@@ -1,16 +1,16 @@
 require "discordcr"
 require "duktape/runtime"
 
-Owner       = 120571255635181568_u64
-REST_CLIENT = Discord::Client.new(ENV["DUKBOT_TOKEN"])
-client = REST_CLIENT
+Owner  = 120571255635181568_u64
+Client = Discord::Client.new(ENV["DUKBOT_TOKEN"])
+client = Client
 
 duk_rt = Duktape::Runtime.new do |sbx|
   sbx.push_global_proc("discord_create_message", 2) do |ptr|
     env = Duktape::Sandbox.new(ptr)
     cid = env.require_string(0).to_u64
     msg = env.require_string(1)
-    REST_CLIENT.create_message(cid, msg)
+    Client.create_message(cid, msg)
     env.call_success
   end
 end
