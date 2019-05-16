@@ -29,7 +29,6 @@ client.on_message_create do |payload|
   else
     duk_rt.call(
       "discord_on_message",
-      payload.channel_id.to_s,
       {
         "content"    => payload.content,
         "channel_id" => payload.channel_id.to_s,
