@@ -1,0 +1,20 @@
+name: dukbot
+version: 0.1.0
+
+authors:
+  - Zac Nowicki <zachnowicki@gmail.com>
+
+dependencies:
+  discordcr:
+    github: meew0/discordcr
+    branch: master
+  duktape:
+    github: jessedoyle/duktape.cr
+
+targets:
+  dukbot:
+    main: src/dukbot.cr
+
+crystal: 0.28.0
+
+license: MIT
