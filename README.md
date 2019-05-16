@@ -6,7 +6,7 @@ JS engine. Quack!
 
 ## Try it
 
-1. Replace `Owner` uin64 value with your own ID
+1. Replace `Owner` uint64 value with your own ID
 2. Run `shards build` to fetch dependencies and build to `bin/dukbot`
 3. Set `DUKBOT_TOKEN` and run `bin/dukbot`
 4. Run some commands, change the `bot.js` file, and run `!reload`
